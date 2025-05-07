@@ -1,0 +1,848 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=2070&h=1380') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Enhanced Navigation Bar */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Enhanced Hero Section */
+.hero-section {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    margin-top: 60px;
+    animation: fadeIn 1s ease-in;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,123,255,0.2) 0%, rgba(0,0,0,0.6) 70%);
+    z-index: -1;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin: 0 0 20px;
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(0,123,255,0.8), 0 0 20px rgba(255,255,255,0.6);
+    }
+}
+
+.hero-section p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.about-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about-section:hover {
+    transform: translateY(0) scale(1.01);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    bottom: 0;
+    left: 20%;
+    background: linear-gradient(90deg, transparent, #007bff, transparent);
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+}
+
+.about-section:hover h2::after {
+    transform: scaleX(1);
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.about-section:hover p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-course-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    z-index: 1;
+}
+
+.about-course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,191,255,0.1));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-course-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-course-card:hover::before {
+    opacity: 1;
+}
+
+.about-course-card h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin: 0 0 15px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.about-course-card:hover h3 {
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+.about-course-card h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #007bff;
+    transition: width 0.3s ease;
+}
+
+.about-course-card:hover h3::after {
+    width: 100%;
+}
+
+.about-course-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    text-shadow: none;
+}
+
+.about-course-card:hover p {
+    color: #333;
+}
+
+/* Subject-specific hover colors */
+.about-course-card:nth-child(1):hover {
+    box-shadow: 0 15px 30px rgba(255, 99, 71, 0.2);
+}
+.about-course-card:nth-child(1):hover h3 {
+    color: #ff6347;
+}
+.about-course-card:nth-child(1):hover h3::after {
+    background: #ff6347;
+}
+
+.about-course-card:nth-child(2):hover {
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.2);
+}
+.about-course-card:nth-child(2):hover h3 {
+    color: #2ecc71;
+}
+.about-course-card:nth-child(2):hover h3::after {
+    background: #2ecc71;
+}
+
+.about-course-card:nth-child(3):hover {
+    box-shadow: 0 15px 30px rgba(155, 89, 182, 0.2);
+}
+.about-course-card:nth-child(3):hover h3 {
+    color: #9b59b6;
+}
+.about-course-card:nth-child(3):hover h3::after {
+    background: #9b59b6;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 15px;
+    }
+    .about-courses {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .about-course-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section h2 {
+        font-size: 28px;
+    }
+    .about-section p {
+        font-size: 16px;
+    }
+}
+
+.instructor-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+.instructor-section:hover {
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.2);
+}
+
+.instructor-section h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+}
+
+.instructor-section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -10px;
+    left: 25%;
+    background: linear-gradient(90deg, transparent, #007bff, transparent);
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.instructor-section:hover h2::after {
+    transform: scaleX(1);
+}
+
+.instructor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    perspective: 1000px;
+}
+
+.instructor-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: translateY(0) rotateY(0);
+    z-index: 1;
+    opacity: 0;
+    animation: cardAppear 0.8s ease-out forwards;
+}
+
+.instructor-card:nth-child(1) { animation-delay: 0.4s; }
+.instructor-card:nth-child(2) { animation-delay: 0.6s; }
+.instructor-card:nth-child(3) { animation-delay: 0.8s; }
+
+.instructor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,123,255,0.1), rgba(0,191,255,0.1));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.instructor-card:hover {
+    transform: translateY(-15px) rotateY(5deg) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.instructor-card:hover::before {
+    opacity: 1;
+}
+
+.instructor-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+    filter: grayscale(20%);
+}
+
+.instructor-card:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    filter: grayscale(0%);
+    border-color: #007bff;
+}
+
+.instructor-card h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin: 0 0 10px;
+    transition: all 0.3s ease;
+}
+
+.instructor-card:hover h3 {
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+.instructor-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 0 0 15px;
+    transition: all 0.3s ease;
+}
+
+.instructor-card .bio {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    transform: translateY(10px);
+}
+
+.instructor-card:hover .bio {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Subject-specific hover effects */
+.instructor-card:nth-child(1):hover {
+    box-shadow: 0 20px 40px rgba(255, 99, 71, 0.25);
+}
+.instructor-card:nth-child(1):hover h3 {
+    color: #ff6347;
+}
+.instructor-card:nth-child(1):hover img {
+    border-color: #ff6347;
+}
+
+.instructor-card:nth-child(2):hover {
+    box-shadow: 0 20px 40px rgba(46, 204, 113, 0.25);
+}
+.instructor-card:nth-child(2):hover h3 {
+    color: #2ecc71;
+}
+.instructor-card:nth-child(2):hover img {
+    border-color: #2ecc71;
+}
+
+.instructor-card:nth-child(3):hover {
+    box-shadow: 0 20px 40px rgba(155, 89, 182, 0.25);
+}
+.instructor-card:nth-child(3):hover h3 {
+    color: #9b59b6;
+}
+.instructor-card:nth-child(3):hover img {
+    border-color: #9b59b6;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) rotateY(30deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .instructor-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .instructor-card {
+        padding: 20px;
+    }
+    
+    .instructor-card img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .instructor-section h2 {
+        font-size: 28px;
+    }
+    
+    .instructor-card h3 {
+        font-size: 20px;
+    }
+    
+    .instructor-card p {
+        font-size: 14px;
+    }
+    
+    .instructor-card .bio {
+        font-size: 13px;
+    }
+}
+
+.group-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: floatIn 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.group-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+                rgba(0, 123, 255, 0.15) 0%, 
+                transparent 70%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.group-section:hover::before {
+    opacity: 1;
+}
+
+.group-container {
+    text-align: center;
+    max-width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.group-container:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 123, 255, 0.3);
+}
+
+.group-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, 
+              rgba(255, 255, 255, 0.05), 
+              rgba(255, 255, 255, 0.02));
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+}
+
+.group-item:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.4);
+    border-color: rgba(0, 123, 255, 0.3);
+}
+
+.group-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+              transparent 0%, 
+              rgba(255, 255, 255, 0.03) 50%, 
+              transparent 100%);
+    transform: translateX(-100%) skewX(-15deg);
+    transition: transform 0.6s ease;
+}
+
+.group-item:hover::before {
+    transform: translateX(100%) skewX(-15deg);
+}
+
+.group-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+              rgba(0, 123, 255, 0.85), 
+              rgba(0, 191, 255, 0.85));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.9) rotateX(15deg);
+}
+
+.group-item:hover .group-overlay {
+    opacity: 1;
+    transform: scale(1) rotateX(0);
+}
+
+.group-overlay h3 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease 0.1s;
+}
+
+.group-item:hover .group-overlay h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.group-title {
+    font-size: 22px;
+    color: #fff;
+    margin: 20px 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.group-container:hover .group-title {
+    transform: translateY(-5px);
+    text-shadow: 0 2px 6px rgba(0, 123, 255, 0.5);
+}
+
+.start-learning-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, 
+              #007bff, 
+              #00bfff);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    transform: translateY(0);
+}
+
+.start-learning-btn:hover {
+    background: linear-gradient(135deg, 
+              #0069d9, 
+              #0095ff);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 123, 255, 0.5);
+}
+
+.start-learning-btn:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.start-learning-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+              transparent 0%, 
+              rgba(255, 255, 255, 0.2) 50%, 
+              transparent 100%);
+    transform: translateX(-100%) skewX(-15deg);
+    transition: transform 0.6s ease;
+}
+
+.start-learning-btn:hover::before {
+    transform: translateX(100%) skewX(-15deg);
+}
+
+/* Tooltip Enhancement */
+.group-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.group-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Animation */
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .group-section {
+        min-height: 400px;
+        padding: 60px 20px;
+    }
+    
+    .group-container {
+        padding: 30px;
+    }
+    
+    .group-item {
+        height: 180px;
+    }
+    
+    .group-overlay h3 {
+        font-size: 20px;
+    }
+    
+    .group-title {
+        font-size: 20px;
+    }
+    
+    .start-learning-btn {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .group-container {
+        padding: 25px;
+        max-width: 320px;
+    }
+    
+    .group-item {
+        height: 160px;
+    }
+    
+    .group-overlay h3 {
+        font-size: 18px;
+    }
+    
+    .group-title {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+    
+    .start-learning-btn {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}

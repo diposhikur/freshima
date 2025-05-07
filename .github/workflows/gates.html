@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gates Academy: Physics, English, Maths</title>
+  <link rel="stylesheet" href="gates.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="hero-section" style="background-image: url('academy-background.jpg');">
+    <div class="hero-content">
+      <h1>Welcome to Gates Academy</h1>
+      <p>Master Physics, English, and Maths with Our Comprehensive Video Lessons</p>
+    </div>
+  </section>
+
+  <div class="search-container">
+    <select id="searchType">
+      <option value="lessons">Lessons</option>
+      <option value="units">Units</option>
+    </select>
+    <input type="text" id="searchBar" placeholder="Search lessons or units...">
+  </div>
+
+  <main>
+    <!-- Physics Section -->
+    <section class="subject-section">
+      <h2>Physics Course</h2>
+      <div class="progress-container">
+        <label for="physics-progress-bar">Progress: <span id="physics-progress-text">0/66 lessons completed</span></label>
+        <progress id="physics-progress-bar" value="0" max="66"></progress>
+      </div>
+
+      <!-- Physics CHAPTER 1 -->
+      <div class="chapter" data-chapter-id="physics-ch1">
+        <div class="chapter-header">
+          <span>CHAPTER 1: PRELIMINARIES</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="physics-ch1" class="sub-lessons">
+          <div class="video-link" data-lesson-id="physics-video1">
+            <span class="lesson-title">1.1 - Physical Quantities and Measurement</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video1">
+            <button class="quiz-btn" data-lesson="physics-video1">Finished</button>
+            <video id="physics-video1" controls>
+              <source src="videos/physics/chapter1/1.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video2">
+            <span class="lesson-title">1.1.1 - Physical Quantities</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video2">
+            <button class="quiz-btn" data-lesson="physics-video2">Finished</button>
+            <video id="physics-video2" controls>
+              <source src="videos/physics/chapter1/1.1.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video3">
+            <span class="lesson-title">1.1.2 - SI Units: Basic and Derived Units</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video3">
+            <button class="quiz-btn" data-lesson="physics-video3">Finished</button>
+            <video id="physics-video3" controls>
+              <source src="videos/physics/chapter1/1.1.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video4">
+            <span class="lesson-title">1.1.3 - Conversion of Units</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video4">
+            <button class="quiz-btn" data-lesson="physics-video4">Finished</button>
+            <video id="physics-video4" controls>
+              <source src="videos/physics/chapter1/1.1.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video5">
+            <span class="lesson-title">1.2 - Uncertainty in Measurement and Significant Digits</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video5">
+            <button class="quiz-btn" data-lesson="physics-video5">Finished</button>
+            <video id="physics-video5" controls>
+              <source src="videos/physics/chapter1/1.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video6">
+            <span class="lesson-title">1.2.1 - Significant Digits</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video6">
+            <button class="quiz-btn" data-lesson="physics-video6">Finished</button>
+            <video id="physics-video6" controls>
+              <source src="videos/physics/chapter1/1.2.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video7">
+            <span class="lesson-title">1.3 - Vectors: Composition and Resolution</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video7">
+            <button class="quiz-btn" data-lesson="physics-video7">Finished</button>
+            <video id="physics-video7" controls>
+              <source src="videos/physics/chapter1/1.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video8">
+            <span class="lesson-title">1.3.1 - Vector Representation</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video8">
+            <button class="quiz-btn" data-lesson="physics-video8">Finished</button>
+            <video id="physics-video8" controls>
+              <source src="videos/physics/chapter1/1.3.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video9">
+            <span class="lesson-title">1.3.2 - Vector Addition</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video9">
+            <button class="quiz-btn" data-lesson="physics-video9">Finished</button>
+            <video id="physics-video9" controls>
+              <source src="videos/physics/chapter1/1.3.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video10">
+            <span class="lesson-title">1.3.3 - Components of Vector</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video10">
+            <button class="quiz-btn" data-lesson="physics-video10">Finished</button>
+            <video id="physics-video10" controls>
+              <source src="videos/physics/chapter1/1.3.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video11">
+            <span class="lesson-title">1.4 - Unit Vector</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video11">
+            <button class="quiz-btn" data-lesson="physics-video11">Finished</button>
+            <video id="physics-video11" controls>
+              <source src="videos/physics/chapter1/1.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video12">
+            <span class="lesson-title">1.4.2 - Finding a Unit Vector</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video12">
+            <button class="quiz-btn" data-lesson="physics-video12">Finished</button>
+            <video id="physics-video12" controls>
+              <source src="videos/physics/chapter1/1.4.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Physics CHAPTER 2 -->
+      <div class="chapter" data-chapter-id="physics-ch2">
+        <div class="chapter-header">
+          <span>CHAPTER 2: KINEMATICS AND DYNAMICS OF PARTICLES</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="physics-ch2" class="sub-lessons">
+          <div class="video-link" data-lesson-id="physics-video13">
+            <span class="lesson-title">2.1 - Kinematics in One and Two Dimensions</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video13">
+            <button class="quiz-btn" data-lesson="physics-video13">Finished</button>
+            <video id="physics-video13" controls>
+              <source src="videos/physics/chapter2/2.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video14">
+            <span class="lesson-title">2.1.1 - Displacement, Velocity and Acceleration in 1D and 2D</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video14">
+            <button class="quiz-btn" data-lesson="physics-video14">Finished</button>
+            <video id="physics-video14" controls>
+              <source src="videos/physics/chapter2/2.1.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video15">
+            <span class="lesson-title">2.1.2 - Motion with Constant Acceleration</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video15">
+            <button class="quiz-btn" data-lesson="physics-video15">Finished</button>
+            <video id="physics-video15" controls>
+              <source src="videos/physics/chapter2/2.1.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video16">
+            <span class="lesson-title">2.1.3 - Free Fall Motion</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video16">
+            <button class="quiz-btn" data-lesson="physics-video16">Finished</button>
+            <video id="physics-video16" controls>
+              <source src="videos/physics/chapter2/2.1.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video17">
+            <span class="lesson-title">2.1.4 - Projectile Motion</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video17">
+            <button class="quiz-btn" data-lesson="physics-video17">Finished</button>
+            <video id="physics-video17" controls>
+              <source src="videos/physics/chapter2/2.1.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video18">
+            <span class="lesson-title">2.2 - Particle Dynamics and Planetary Motion</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video18">
+            <button class="quiz-btn" data-lesson="physics-video18">Finished</button>
+            <video id="physics-video18" controls>
+              <source src="videos/physics/chapter2/2.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video19">
+            <span class="lesson-title">2.2.1 - The Concept of Force as A Measure of Interaction</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video19">
+            <button class="quiz-btn" data-lesson="physics-video19">Finished</button>
+            <video id="physics-video19" controls>
+              <source src="videos/physics/chapter2/2.2.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video20">
+            <span class="lesson-title">2.2.2 - Type of Forces</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video20">
+            <button class="quiz-btn" data-lesson="physics-video20">Finished</button>
+            <video id="physics-video20" controls>
+              <source src="videos/physics/chapter2/2.2.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video21">
+            <span class="lesson-title">2.2.3 - Newton’s Laws of Motion and Applications</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video21">
+            <button class="quiz-btn" data-lesson="physics-video21">Finished</button>
+            <video id="physics-video21" controls>
+              <source src="videos/physics/chapter2/2.2.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video22">
+            <span class="lesson-title">2.2.4 - Uniform Circular Motion</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video22">
+            <button class="quiz-btn" data-lesson="physics-video22">Finished</button>
+            <video id="physics-video22" controls>
+              <source src="videos/physics/chapter2/2.2.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video23">
+            <span class="lesson-title">2.2.5 - Newton’s Law of Universal Gravitation</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video23">
+            <button class="quiz-btn" data-lesson="physics-video23">Finished</button>
+            <video id="physics-video23" controls>
+              <source src="videos/physics/chapter2/2.2.5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video24">
+            <span class="lesson-title">2.2.6 - Kepler’s Laws, Satellites Motion and Weightlessness</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video24">
+            <button class="quiz-btn" data-lesson="physics-video24">Finished</button>
+            <video id="physics-video24" controls>
+              <source src="videos/physics/chapter2/2.2.6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video25">
+            <span class="lesson-title">2.3 - Work, Energy and Linear Momentum</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video25">
+            <button class="quiz-btn" data-lesson="physics-video25">Finished</button>
+            <video id="physics-video25" controls>
+              <source src="videos/physics/chapter2/2.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video26">
+            <span class="lesson-title">2.3.1 - Work and Energy</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video26">
+            <button class="quiz-btn" data-lesson="physics-video26">Finished</button>
+            <video id="physics-video26" controls>
+              <source src="videos/physics/chapter2/2.3.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video27">
+            <span class="lesson-title">2.3.2 - Power</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video27">
+            <button class="quiz-btn" data-lesson="physics-video27">Finished</button>
+            <video id="physics-video27" controls>
+              <source src="videos/physics/chapter2/2.3.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video28">
+            <span class="lesson-title">2.3.3 - Linear Momentum</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video28">
+            <button class="quiz-btn" data-lesson="physics-video28">Finished</button>
+            <video id="physics-video28" controls>
+              <source src="videos/physics/chapter2/2.3.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video29">
+            <span class="lesson-title">2.3.4 - Collisions</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video29">
+            <button class="quiz-btn" data-lesson="physics-video29">Finished</button>
+            <video id="physics-video29" controls>
+              <source src="videos/physics/chapter2/2.3.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video30">
+            <span class="lesson-title">2.3.5 - Center of Mass</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video30">
+            <button class="quiz-btn" data-lesson="physics-video30">Finished</button>
+            <video id="physics-video30" controls>
+              <source src="videos/physics/chapter2/2.3.5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Physics CHAPTER 3 -->
+      <div class="chapter" data-chapter-id="physics-ch3">
+        <div class="chapter-header">
+          <span>CHAPTER 3: FLUID MECHANICS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="physics-ch3" class="sub-lessons">
+          <div class="video-link" data-lesson-id="physics-video31">
+            <span class="lesson-title">3.1 - Properties of Bulk Matter</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video31">
+            <button class="quiz-btn" data-lesson="physics-video31">Finished</button>
+            <video id="physics-video31" controls>
+              <source src="videos/physics/chapter3/3.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video32">
+            <span class="lesson-title">3.2 - Density and Pressure in Static Fluids</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video32">
+            <button class="quiz-btn" data-lesson="physics-video32">Finished</button>
+            <video id="physics-video32" controls>
+              <source src="videos/physics/chapter3/3.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video33">
+            <span class="lesson-title">3.3 - Buoyant Force and Archimedes’ Principles</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video33">
+            <button class="quiz-btn" data-lesson="physics-video33">Finished</button>
+            <video id="physics-video33" controls>
+              <source src="videos/physics/chapter3/3.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video34">
+            <span class="lesson-title">3.3.1 - Archimedes’ Principle</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video34">
+            <button class="quiz-btn" data-lesson="physics-video34">Finished</button>
+            <video id="physics-video34" controls>
+              <source src="videos/physics/chapter3/3.3.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video35">
+            <span class="lesson-title">3.4 - Moving Fluids and Bernoulli Equations (Fluid Dynamics)</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video35">
+            <button class="quiz-btn" data-lesson="physics-video35">Finished</button>
+            <video id="physics-video35" controls>
+              <source src="videos/physics/chapter3/3.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video36">
+            <span class="lesson-title">3.4.1 - Bernoulli’s Equation</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video36">
+            <button class="quiz-btn" data-lesson="physics-video36">Finished</button>
+            <video id="physics-video36" controls>
+              <source src="videos/physics/chapter3/3.4.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Physics CHAPTER 4 -->
+      <div class="chapter" data-chapter-id="physics-ch4">
+        <div class="chapter-header">
+          <span>CHAPTER 4: HEAT AND THERMODYNAMICS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="physics-ch4" class="sub-lessons">
+          <div class="video-link" data-lesson-id="physics-video37">
+            <span class="lesson-title">4.1 - The Concept of Temperature and the Zeroth Law of Thermodynamics</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video37">
+            <button class="quiz-btn" data-lesson="physics-video37">Finished</button>
+            <video id="physics-video37" controls>
+              <source src="videos/physics/chapter4/4.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video38">
+            <span class="lesson-title">4.2 - Thermal Expansion</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video38">
+            <button class="quiz-btn" data-lesson="physics-video38">Finished</button>
+            <video id="physics-video38" controls>
+              <source src="videos/physics/chapter4/4.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video39">
+            <span class="lesson-title">4.3 - The Concept of Heat, Work and Internal Energy</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video39">
+            <button class="quiz-btn" data-lesson="physics-video39">Finished</button>
+            <video id="physics-video39" controls>
+              <source src="videos/physics/chapter4/4.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video40">
+            <span class="lesson-title">4.4 - Specific Heat and Latent Heat</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video40">
+            <button class="quiz-btn" data-lesson="physics-video40">Finished</button>
+            <video id="physics-video40" controls>
+              <source src="videos/physics/chapter4/4.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video41">
+            <span class="lesson-title">4.5 - Heat Transfer Mechanisms</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video41">
+            <button class="quiz-btn" data-lesson="physics-video41">Finished</button>
+            <video id="physics-video41" controls>
+              <source src="videos/physics/chapter4/4.5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video42">
+            <span class="lesson-title">4.6 - The First Law of Thermodynamics</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video42">
+            <button class="quiz-btn" data-lesson="physics-video42">Finished</button>
+            <video id="physics-video42" controls>
+              <source src="videos/physics/chapter4/4.6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Physics CHAPTER 5 -->
+      <div class="chapter" data-chapter-id="physics-ch5">
+        <div class="chapter-header">
+          <span>CHAPTER 5: OSCILLATIONS, WAVES AND OPTICS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="physics-ch5" class="sub-lessons">
+          <div class="video-link" data-lesson-id="physics-video43">
+            <span class="lesson-title">5.1 - Simple Harmonic Motion</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video43">
+            <button class="quiz-btn" data-lesson="physics-video43">Finished</button>
+            <video id="physics-video43" controls>
+              <source src="videos/physics/chapter5/5.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video44">
+            <span class="lesson-title">5.1.1 - Periodic and Oscillatory Motion</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video44">
+            <button class="quiz-btn" data-lesson="physics-video44">Finished</button>
+            <video id="physics-video44" controls>
+              <source src="videos/physics/chapter5/5.1.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video45">
+            <span class="lesson-title">5.1.2 - Displacement, Velocity and Acceleration in a SHM</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video45">
+            <button class="quiz-btn" data-lesson="physics-video45">Finished</button>
+            <video id="physics-video45" controls>
+              <source src="videos/physics/chapter5/5.1.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video46">
+            <span class="lesson-title">5.2 - The Simple Pendulum</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video46">
+            <button class="quiz-btn" data-lesson="physics-video46">Finished</button>
+            <video id="physics-video46" controls>
+              <source src="videos/physics/chapter5/5.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video47">
+            <span class="lesson-title">5.3 - Wave and Its Characteristics</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video47">
+            <button class="quiz-btn" data-lesson="physics-video47">Finished</button>
+            <video id="physics-video47" controls>
+              <source src="videos/physics/chapter5/5.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video48">
+            <span class="lesson-title">5.4 - Resonance</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video48">
+            <button class="quiz-btn" data-lesson="physics-video48">Finished</button>
+            <video id="physics-video48" controls>
+              <source src="videos/physics/chapter5/5.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video49">
+            <span class="lesson-title">5.5 - The Doppler Effect</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video49">
+            <button class="quiz-btn" data-lesson="physics-video49">Finished</button>
+            <video id="physics-video49" controls>
+              <source src="videos/physics/chapter5/5.5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video50">
+            <span class="lesson-title">5.6 - Image Formation by Thin Lenses and Mirrors</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video50">
+            <button class="quiz-btn" data-lesson="physics-video50">Finished</button>
+            <video id="physics-video50" controls>
+              <source src="videos/physics/chapter5/5.6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Physics CHAPTER 6 -->
+      <div class="chapter" data-chapter-id="physics-ch6">
+        <div class="chapter-header">
+          <span>CHAPTER 6: ELECTROMAGNETISM AND ELECTRONICS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="physics-ch6" class="sub-lessons">
+          <div class="video-link" data-lesson-id="physics-video51">
+            <span class="lesson-title">6.1 - Coulomb’s Law and Electric Fields</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video51">
+            <button class="quiz-btn" data-lesson="physics-video51">Finished</button>
+            <video id="physics-video51" controls>
+              <source src="videos/physics/chapter6/6.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video52">
+            <span class="lesson-title">6.2 - Electric Potential</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video52">
+            <button class="quiz-btn" data-lesson="physics-video52">Finished</button>
+            <video id="physics-video52" controls>
+              <source src="videos/physics/chapter6/6.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video53">
+            <span class="lesson-title">6.3 - Current, Resistance and Ohm’s Law</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video53">
+            <button class="quiz-btn" data-lesson="physics-video53">Finished</button>
+            <video id="physics-video53" controls>
+              <source src="videos/physics/chapter6/6.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video54">
+            <span class="lesson-title">6.4 - Electrical Energy and Power</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video54">
+            <button class="quiz-btn" data-lesson="physics-video54">Finished</button>
+            <video id="physics-video54" controls>
+              <source src="videos/physics/chapter6/6.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video55">
+            <span class="lesson-title">6.5 - Equivalent Resistance and Kirchhoff’s Rule</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video55">
+            <button class="quiz-btn" data-lesson="physics-video55">Finished</button>
+            <video id="physics-video55" controls>
+              <source src="videos/physics/chapter6/6.5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video56">
+            <span class="lesson-title">6.6 - Magnetic Field and Magnetic Flux</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video56">
+            <button class="quiz-btn" data-lesson="physics-video56">Finished</button>
+            <video id="physics-video56" controls>
+              <source src="videos/physics/chapter6/6.6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video57">
+            <span class="lesson-title">6.7 - Electromagnetic Induction</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video57">
+            <button class="quiz-btn" data-lesson="physics-video57">Finished</button>
+            <video id="physics-video57" controls>
+              <source src="videos/physics/chapter6/6.7.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video58">
+            <span class="lesson-title">6.8 - Insulators, Conductors and Semiconductors</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video58">
+            <button class="quiz-btn" data-lesson="physics-video58">Finished</button>
+            <video id="physics-video58" controls>
+              <source src="videos/physics/chapter6/6.8.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video59">
+            <span class="lesson-title">6.9 - Diodes</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video59">
+            <button class="quiz-btn" data-lesson="physics-video59">Finished</button>
+            <video id="physics-video59" controls>
+              <source src="videos/physics/chapter6/6.9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video60">
+            <span class="lesson-title">6.10 - Transistors</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video60">
+            <button class="quiz-btn" data-lesson="physics-video60">Finished</button>
+            <video id="physics-video60" controls>
+              <source src="videos/physics/chapter6/6.10.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Physics CHAPTER 7 -->
+      <div class="chapter" data-chapter-id="physics-ch7">
+        <div class="chapter-header">
+          <span>CHAPTER 7: CROSS CUTTING APPLICATIONS OF PHYSICS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="physics-ch7" class="sub-lessons">
+          <div class="video-link" data-lesson-id="physics-video61">
+            <span class="lesson-title">7.1 - Physics in Agriculture and Environment</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video61">
+            <button class="quiz-btn" data-lesson="physics-video61">Finished</button>
+            <video id="physics-video61" controls>
+              <source src="videos/physics/chapter7/7.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video62">
+            <span class="lesson-title">7.2 - Physics in Industries</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video62">
+            <button class="quiz-btn" data-lesson="physics-video62">Finished</button>
+            <video id="physics-video62" controls>
+              <source src="videos/physics/chapter7/7.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video63">
+            <span class="lesson-title">7.3 - Physics in Health Sciences and Medical Imaging</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video63">
+            <button class="quiz-btn" data-lesson="physics-video63">Finished</button>
+            <video id="physics-video63" controls>
+              <source src="videos/physics/chapter7/7.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video64">
+            <span class="lesson-title">7.4 - Physics and Archeology</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video64">
+            <button class="quiz-btn" data-lesson="physics-video64">Finished</button>
+            <video id="physics-video64" controls>
+              <source src="videos/physics/chapter7/7.4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video65">
+            <span class="lesson-title">7.5 - Application in Earth and Space Sciences</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video65">
+            <button class="quiz-btn" data-lesson="physics-video65">Finished</button>
+            <video id="physics-video65" controls>
+              <source src="videos/physics/chapter7/7.5.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="physics-video66">
+            <span class="lesson-title">7.6 - Applications in Power Generation</span>
+            <input type="checkbox" class="progress-checkbox" data-video="physics-video66">
+            <button class="quiz-btn" data-lesson="physics-video66">Finished</button>
+            <video id="physics-video66" controls>
+              <source src="videos/physics/chapter7/7.6.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- English Section -->
+    <section class="subject-section">
+      <h2>English Course</h2>
+      <div class="progress-container">
+        <label for="english-progress-bar">Progress: <span id="english-progress-text">0/30 lessons completed</span></label>
+        <progress id="english-progress-bar" value="0" max="30"></progress>
+      </div>
+
+      <!-- English CHAPTER 1 -->
+      <div class="chapter" data-chapter-id="english-ch1">
+        <div class="chapter-header">
+          <span>CHAPTER 1: GRAMMAR FUNDAMENTALS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch1" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video1">
+            <span class="lesson-title">1.1 - Parts of Speech</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video1">
+            <button class="quiz-btn" data-lesson="english-video1">Finished</button>
+            <video id="english-video1" controls>
+              <source src="videos/english/chapter1/1.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video2">
+            <span class="lesson-title">1.2 - Sentence Structure</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video2">
+            <button class="quiz-btn" data-lesson="english-video2">Finished</button>
+            <video id="english-video2" controls>
+              <source src="videos/english/chapter1/1.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video3">
+            <span class="lesson-title">1.3 - Tenses Overview</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video3">
+            <button class="quiz-btn" data-lesson="english-video3">Finished</button>
+            <video id="english-video3" controls>
+              <source src="videos/english/chapter1/1.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 2 -->
+      <div class="chapter" data-chapter-id="english-ch2">
+        <div class="chapter-header">
+          <span>CHAPTER 2: VOCABULARY BUILDING</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch2" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video4">
+            <span class="lesson-title">2.1 - Synonyms and Antonyms</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video4">
+            <button class="quiz-btn" data-lesson="english-video4">Finished</button>
+            <video id="english-video4" controls>
+              <source src="videos/english/chapter2/2.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video5">
+            <span class="lesson-title">2.2 - Contextual Vocabulary</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video5">
+            <button class="quiz-btn" data-lesson="english-video5">Finished</button>
+            <video id="english-video5" controls>
+              <source src="videos/english/chapter2/2.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video6">
+            <span class="lesson-title">2.3 - Idioms and Phrases</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video6">
+            <button class="quiz-btn" data-lesson="english-video6">Finished</button>
+            <video id="english-video6" controls>
+              <source src="videos/english/chapter2/2.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 3 -->
+      <div class="chapter" data-chapter-id="english-ch3">
+        <div class="chapter-header">
+          <span>CHAPTER 3: READING COMPREHENSION</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch3" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video7">
+            <span class="lesson-title">3.1 - Skimming and Scanning</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video7">
+            <button class="quiz-btn" data-lesson="english-video7">Finished</button>
+            <video id="english-video7" controls>
+              <source src="videos/english/chapter3/3.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video8">
+            <span class="lesson-title">3.2 - Understanding Main Ideas</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video8">
+            <button class="quiz-btn" data-lesson="english-video8">Finished</button>
+            <video id="english-video8" controls>
+              <source src="videos/english/chapter3/3.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video9">
+            <span class="lesson-title">3.3 - Inference and Prediction</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video9">
+            <button class="quiz-btn" data-lesson="english-video9">Finished</button>
+            <video id="english-video9" controls>
+              <source src="videos/english/chapter3/3.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 4 -->
+      <div class="chapter" data-chapter-id="english-ch4">
+        <div class="chapter-header">
+          <span>CHAPTER 4: WRITING SKILLS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch4" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video10">
+            <span class="lesson-title">4.1 - Paragraph Writing</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video10">
+            <button class="quiz-btn" data-lesson="english-video10">Finished</button>
+            <video id="english-video10" controls>
+              <source src="videos/english/chapter4/4.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video11">
+            <span class="lesson-title">4.2 - Essay Structure</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video11">
+            <button class="quiz-btn" data-lesson="english-video11">Finished</button>
+            <video id="english-video11" controls>
+              <source src="videos/english/chapter4/4.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video12">
+            <span class="lesson-title">4.3 - Formal and Informal Letters</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video12">
+            <button class="quiz-btn" data-lesson="english-video12">Finished</button>
+            <video id="english-video12" controls>
+              <source src="videos/english/chapter4/4.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 5 -->
+      <div class="chapter" data-chapter-id="english-ch5">
+        <div class="chapter-header">
+          <span>CHAPTER 5: SPEAKING AND LISTENING</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch5" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video13">
+            <span class="lesson-title">5.1 - Pronunciation Basics</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video13">
+            <button class="quiz-btn" data-lesson="english-video13">Finished</button>
+            <video id="english-video13" controls>
+              <source src="videos/english/chapter5/5.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video14">
+            <span class="lesson-title">5.2 - Active Listening Skills</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video14">
+            <button class="quiz-btn" data-lesson="english-video14">Finished</button>
+            <video id="english-video14" controls>
+              <source src="videos/english/chapter5/5.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video15">
+            <span class="lesson-title">5.3 - Public Speaking</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video15">
+            <button class="quiz-btn" data-lesson="english-video15">Finished</button>
+            <video id="english-video15" controls>
+              <source src="videos/english/chapter5/5.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 6 -->
+      <div class="chapter" data-chapter-id="english-ch6">
+        <div class="chapter-header">
+          <span>CHAPTER 6: LITERATURE INTRODUCTION</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch6" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video16">
+            <span class="lesson-title">6.1 - Poetry Analysis</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video16">
+            <button class="quiz-btn" data-lesson="english-video16">Finished</button>
+            <video id="english-video16" controls>
+              <source src="videos/english/chapter6/6.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video17">
+            <span class="lesson-title">6.2 - Prose Analysis</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video17">
+            <button class="quiz-btn" data-lesson="english-video17">Finished</button>
+            <video id="english-video17" controls>
+              <source src="videos/english/chapter6/6.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video18">
+            <span class="lesson-title">6.3 - Drama Elements</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video18">
+            <button class="quiz-btn" data-lesson="english-video18">Finished</button>
+            <video id="english-video18" controls>
+              <source src="videos/english/chapter6/6.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 7 -->
+      <div class="chapter" data-chapter-id="english-ch7">
+        <div class="chapter-header">
+          <span>CHAPTER 7: ADVANCED GRAMMAR</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch7" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video19">
+            <span class="lesson-title">7.1 - Subjunctive Mood</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video19">
+            <button class="quiz-btn" data-lesson="english-video19">Finished</button>
+            <video id="english-video19" controls>
+              <source src="videos/english/chapter7/7.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video20">
+            <span class="lesson-title">7.2 - Conditional Sentences</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video20">
+            <button class="quiz-btn" data-lesson="english-video20">Finished</button>
+            <video id="english-video20" controls>
+              <source src="videos/english/chapter7/7.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video21">
+            <span class="lesson-title">7.3 - Advanced Punctuation</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video21">
+            <button class="quiz-btn" data-lesson="english-video21">Finished</button>
+            <video id="english-video21" controls>
+              <source src="videos/english/chapter7/7.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 8 -->
+      <div class="chapter" data-chapter-id="english-ch8">
+        <div class="chapter-header">
+          <span>CHAPTER 8: CREATIVE WRITING</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch8" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video22">
+            <span class="lesson-title">8.1 - Narrative Techniques</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video22">
+            <button class="quiz-btn" data-lesson="english-video22">Finished</button>
+            <video id="english-video22" controls>
+              <source src="videos/english/chapter8/8.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video23">
+            <span class="lesson-title">8.2 - Descriptive Writing</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video23">
+            <button class="quiz-btn" data-lesson="english-video23">Finished</button>
+            <video id="english-video23" controls>
+              <source src="videos/english/chapter8/8.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video24">
+            <span class="lesson-title">8.3 - Poetry Writing</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video24">
+            <button class="quiz-btn" data-lesson="english-video24">Finished</button>
+            <video id="english-video24" controls>
+              <source src="videos/english/chapter8/8.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 9 -->
+      <div class="chapter" data-chapter-id="english-ch9">
+        <div class="chapter-header">
+          <span>CHAPTER 9: BUSINESS ENGLISH</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch9" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video25">
+            <span class="lesson-title">9.1 - Professional Emails</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video25">
+            <button class="quiz-btn" data-lesson="english-video25">Finished</button>
+            <video id="english-video25" controls>
+              <source src="videos/english/chapter9/9.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video26">
+            <span class="lesson-title">9.2 - Presentations</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video26">
+            <button class="quiz-btn" data-lesson="english-video26">Finished</button>
+            <video id="english-video26" controls>
+              <source src="videos/english/chapter9/9.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video27">
+            <span class="lesson-title">9.3 - Negotiation Skills</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video27">
+            <button class="quiz-btn" data-lesson="english-video27">Finished</button>
+            <video id="english-video27" controls>
+              <source src="videos/english/chapter9/9.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- English CHAPTER 10 -->
+      <div class="chapter" data-chapter-id="english-ch10">
+        <div class="chapter-header">
+          <span>CHAPTER 10: ENGLISH FOR EXAMS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="english-ch10" class="sub-lessons">
+          <div class="video-link" data-lesson-id="english-video28">
+            <span class="lesson-title">10.1 - IELTS Preparation</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video28">
+            <button class="quiz-btn" data-lesson="english-video28">Finished</button>
+            <video id="english-video28" controls>
+              <source src="videos/english/chapter10/10.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video29">
+            <span class="lesson-title">10.2 - TOEFL Strategies</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video29">
+            <button class="quiz-btn" data-lesson="english-video29">Finished</button>
+            <video id="english-video29" controls>
+              <source src="videos/english/chapter10/10.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="english-video30">
+            <span class="lesson-title">10.3 - Standardized Test Tips</span>
+            <input type="checkbox" class="progress-checkbox" data-video="english-video30">
+            <button class="quiz-btn" data-lesson="english-video30">Finished</button>
+            <video id="english-video30" controls>
+              <source src="videos/english/chapter10/10.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maths Section -->
+    <section class="subject-section">
+      <h2>Maths Course</h2>
+      <div class="progress-container">
+        <label for="maths-progress-bar">Progress: <span id="maths-progress-text">0/15 lessons completed</span></label>
+        <progress id="maths-progress-bar" value="0" max="15"></progress>
+      </div>
+
+      <!-- Maths CHAPTER 1 -->
+      <div class="chapter" data-chapter-id="maths-ch1">
+        <div class="chapter-header">
+          <span>CHAPTER 1: ALGEBRA BASICS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="maths-ch1" class="sub-lessons">
+          <div class="video-link" data-lesson-id="maths-video1">
+            <span class="lesson-title">1.1 - Linear Equations</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video1">
+            <button class="quiz-btn" data-lesson="maths-video1">Finished</button>
+            <video id="maths-video1" controls>
+              <source src="videos/maths/chapter1/1.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="maths-video2">
+            <span class="lesson-title">1.2 - Quadratic Equations</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video2">
+            <button class="quiz-btn" data-lesson="maths-video2">Finished</button>
+            <video id="maths-video2" controls>
+              <source src="videos/maths/chapter1/1.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="maths-video3">
+            <span class="lesson-title">1.3 - Polynomials</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video3">
+            <button class="quiz-btn" data-lesson="maths-video3">Finished</button>
+            <video id="maths-video3" controls>
+              <source src="videos/maths/chapter1/1.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maths CHAPTER 2 -->
+      <div class="chapter" data-chapter-id="maths-ch2">
+        <div class="chapter-header">
+          <span>CHAPTER 2: GEOMETRY</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="maths-ch2" class="sub-lessons">
+          <div class="video-link" data-lesson-id="maths-video4">
+            <span class="lesson-title">2.1 - Angles and Triangles</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video4">
+            <button class="quiz-btn" data-lesson="maths-video4">Finished</button>
+            <video id="maths-video4" controls>
+              <source src="videos/maths/chapter2/2.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="maths-video5">
+            <span class="lesson-title">2.2 - Circles</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video5">
+            <button class="quiz-btn" data-lesson="maths-video5">Finished</button>
+            <video id="maths-video5" controls>
+              <source src="videos/maths/chapter2/2.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="maths-video6">
+            <span class="lesson-title">2.3 - Coordinate Geometry</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video6">
+            <button class="quiz-btn" data-lesson="maths-video6">Finished</button>
+            <video id="maths-video6" controls>
+              <source src="videos/maths/chapter2/2.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maths CHAPTER 3 -->
+      <div class="chapter" data-chapter-id="maths-ch3">
+        <div class="chapter-header">
+          <span>CHAPTER 3: TRIGONOMETRY</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="maths-ch3" class="sub-lessons">
+          <div class="video-link" data-lesson-id="maths-video7">
+            <span class="lesson-title">3.1 - Trigonometric Ratios</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video7">
+            <button class="quiz-btn" data-lesson="maths-video7">Finished</button>
+            <video id="maths-video7" controls>
+              <source src="videos/maths/chapter3/3.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="maths-video8">
+            <span class="lesson-title">3.2 - Trigonometric Identities</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video8">
+            <button class="quiz-btn" data-lesson="maths-video8">Finished</button>
+            <video id="maths-video8" controls>
+              <source src="videos/maths/chapter3/3.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="maths-video9">
+            <span class="lesson-title">3.3 - Applications of Trigonometry</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video9">
+            <button class="quiz-btn" data-lesson="maths-video9">Finished</button>
+            <video id="maths-video9" controls>
+              <source src="videos/maths/chapter3/3.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maths CHAPTER 4 -->
+      <div class="chapter" data-chapter-id="maths-ch4">
+        <div class="chapter-header">
+          <span>CHAPTER 4: CALCULUS</span>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div id="maths-ch4" class="sub-lessons">
+          <div class="video-link" data-lesson-id="maths-video10">
+            <span class="lesson-title">4.1 - Limits and Continuity</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video10">
+            <button class="quiz-btn" data-lesson="maths-video10">Finished</button>
+            <video id="maths-video10" controls>
+              <source src="videos/maths/chapter4/4.1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="maths-video11">
+            <span class="lesson-title">4.2 - Differentiation</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video11">
+            <button class="quiz-btn" data-lesson="maths-video11">Finished</button>
+            <video id="maths-video11" controls>
+              <source src="videos/maths/chapter4/4.2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-link" data-lesson-id="maths-video12">
+            <span class="lesson-title">4.3 - Integration</span>
+            <input type="checkbox" class="progress-checkbox" data-video="maths-video12">
+            <button class="quiz-btn" data-lesson="maths-video12">Finished</button>
+            <video id="maths-video12" controls>
+              <source src="videos/maths/chapter4/4.3.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maths CHAPTER 5 -->
+<div class="chapter" data-chapter-id="maths-ch5">
+    <div class="chapter-header">
+      <span>CHAPTER 5: STATISTICS AND PROBABILITY</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div id="maths-ch5" class="sub-lessons">
+      <div class="video-link" data-lesson-id="maths-video13">
+        <span class="lesson-title">5.1 - Measures of Central Tendency</span>
+        <input type="checkbox" class="progress-checkbox" data-video="maths-video13">
+        <button class="quiz-btn" data-lesson="maths-video13">Finished</button>
+        <video id="maths-video13" controls>
+          <source src="videos/maths/chapter5/5.1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-link" data-lesson-id="maths-video14">
+        <span class="lesson-title">5.2 - Probability Basics</span>
+        <input type="checkbox" class="progress-checkbox" data-video="maths-video14">
+        <button class="quiz-btn" data-lesson="maths-video14">Finished</button>
+        <video id="maths-video14" controls>
+          <source src="videos/maths/chapter5/5.2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="video-link" data-lesson-id="maths-video15">
+        <span class="lesson-title">5.3 - Data Representation</span>
+        <input type="checkbox" class="progress-checkbox" data-video="maths-video15">
+        <button class="quiz-btn" data-lesson="maths-video15">Finished</button>
+        <video id="maths-video15" controls>
+          <source src="videos/maths/chapter5/5.3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+  </section>
+  </main>
+  <script src="gates.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshLearn - Courses for Freshman Students</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <a href="/">FreshLearn</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for courses..." oninput="searchCourses()">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero-content">Home</a></li>
+                <li><a href="#learning-path">Categories</a></li> <!-- Changed to match section ID -->
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content" id="hero-content">
+        <h1>Start Your Freshman Journey with Confidence</h1>
+        <p>Free courses in Maths, English, Physics, Geography, Psychology, and more, designed for freshman students.</p>
+        <a href="#courses" class="cta-button">Explore Free Courses</a>
+    </div>
+</section>
+<!-- Video Description Section -->
+<section class="video-description">
+    <div class="video-container">
+        <div class="video-wrapper">
+            <!-- YouTube iframe without related videos and no-redirect -->
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/yZr4BTQqLB4?si=CRFMvmIk9lzv5DWa&rel=0&modestbranding=1" 
+                    title="FreshLearn Course Introduction" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <div class="description-content">
+        <h2>Learn How Our Courses Can Help You Succeed</h2>
+        <p>This comprehensive video explains how our specially designed courses give freshman students the academic advantage they need. Learn about:</p>
+        
+        <ul class="features-list">
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Our unique teaching methodology</span>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Course structure and curriculum</span>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Success stories from past students</span>
+            </li>
+            <li>
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>How to get the most from our platform</span>
+            </li>
+        </ul>
+        
+        <div class="cta-buttons">
+            <a href="#grouped-courses" class="primary-button">Start Learning Now</a>
+            <a href="#courses" class="secondary-button">Browse All Courses</a>
+        </div>
+    </div>
+</section>
+<section class="learning-path" id="learning-path">
+    <h2>Choose Your Learning Path</h2>
+    <div class="path-buttons">
+        <button class="path-button active" data-path="grouped">
+            <span class="button-content">
+                <span class="button-icon">📚</span>
+                <span class="button-text">Explore Grouped Courses</span>
+            </span>
+            <span class="button-dots"></span>
+        </button>
+        <button class="path-button" data-path="individual">
+            <span class="button-content">
+                <span class="button-icon">🎓</span>
+                <span class="button-text">Individual Courses for Freshmen</span>
+            </span>
+            <span class="button-dots"></span>
+        </button>
+    </div>
+</section>
+<section class="grouped-courses" id="grouped-courses">
+    <h2>Explore Grouped Courses</h2>
+    <div class="group-box">
+        <div class="group-container">
+            <a href="gate.html" class="group-item" id="group1" data-group="Maths, English, Physics">
+                <div class="group-overlay">
+                    <h3>Maths, English, Physics</h3>
+                </div>
+            </a>
+            <div class="group-title">Maths, English, Physics</div>
+            <a href="gate.html" class="start-learning-btn">Start Learning</a>
+        </div>
+        <div class="group-container">
+            <a href="gate.html" class="group-item" id="group2" data-group="Maths, English, Geography">
+                <div class="group-overlay">
+                    <h3>Maths, English, Geography</h3>
+                </div>
+            </a>
+            <div class="group-title">Maths, English, Geography</div>
+            <a href="gate.html" class="start-learning-btn">Start Learning</a>
+        </div>
+        <div class="group-container">
+            <a href="gate.html" class="group-item" id="group3" data-group="Psychology, Logic, Emerging Tech">
+                <div class="group-overlay">
+                    <h3>Psychology, Logic, Emerging Tech</h3>
+                </div>
+            </a>
+            <div class="group-title">Psychology, Logic, Emerging Tech</div>
+            <a href="gate.html" class="start-learning-btn">Start Learning</a>
+        </div>
+        <div class="group-container">
+            <a href="gate.html" class="group-item" id="group4" data-group="History, Economics, Anthropology">
+                <div class="group-overlay">
+                    <h3>History, Economics, Anthropology</h3>
+                </div>
+            </a>
+            <div class="group-title">History, Economics, Anthropology</div>
+            <a href="gate.html" class="start-learning-btn">Start Learning</a>
+        </div>
+    </div>
+</section>
+<section class="courses" id="courses">
+    <h2>Individual Courses for Freshmen</h2>
+    <div class="course-grid">
+        <div class="course-card" data-subject="maths">
+            <img src="https://media.istockphoto.com/id/636332456/photo/online-education-concept.jpg?s=612x612&w=0&k=20&c=a2m2jmoTXjJ3VthO1vvnpWT5FrHasFfVghSTUo2PH48=" alt="Maths Course">
+            <h3>Foundation Maths</h3>
+            <p>Master algebra and geometry for freshman success.</p>
+            <div class="category">Maths</div>
+            <a href="maths.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="english">
+            <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d" alt="English Course">
+            <h3>English for Freshmen</h3>
+            <p>Improve your writing and communication skills.</p>
+            <div class="category">English</div>
+            <a href="english.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="physics">
+            <img src="https://media.istockphoto.com/id/1866121335/photo/physics-and-mathematics.jpg?s=612x612&w=0&k=20&c=OZmyFAhrYgv-61E3UBjii7R5rLqp5cNdokXSuoTCpiY=" alt="Physics Course">
+            <h3>Introduction to Physics</h3>
+            <p>Learn the basics of mechanics and energy.</p>
+            <div class="category">Physics</div>
+            <a href="physics.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="geography">
+            <img src="https://media.istockphoto.com/id/579770584/photo/geography-worldwide-explorer-continent-country-concept.jpg?s=612x612&w=0&k=20&c=SlyNRtxZZz0Lkwh_bC4w-yiIhhearZwVTQXEpVHz2kA=" alt="Geography Course">
+            <h3>World Geography Basics</h3>
+            <p>Explore physical and human geography concepts.</p>
+            <div class="category">Geography</div>
+            <a href="geography.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="psychology">
+            <img src="https://www.shutterstock.com/shutterstock/photos/527844043/display_1500/stock-photo-child-mentor-educator-supporting-kid-in-sorting-out-problems-527844043.jpg" alt="Psychology Course">
+            <h3>Introduction to Psychology</h3>
+            <p>Understand human behavior and mental processes.</p>
+            <div class="category">Psychology</div>
+            <a href="psychology.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="logic">
+            <img src="https://www.shutterstock.com/shutterstock/photos/2228719455/display_1500/stock-photo-post-quantum-cryptography-and-quantum-resistant-cryptography-pqc-new-cryptographic-algorithms-2228719455.jpg" alt="Logic Course">
+            <h3>Fundamentals of Logic</h3>
+            <p>Learn critical thinking and reasoning skills.</p>
+            <div class="category">Logic</div>
+            <a href="logic.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="history">
+            <img src="https://media.istockphoto.com/id/185215276/photo/antique-books-in-a-library.jpg?s=612x612&w=0&k=20&c=G65nHS2qkFo0I_uEix23ZNiq5QuQBrZOcUlDYg-uarg=" alt="History Course">
+            <h3>World History Essentials</h3>
+            <p>Discover key events shaping human civilization.</p>
+            <div class="category">History</div>
+            <a href="history.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="anthropology">
+            <img src="https://t4.ftcdn.net/jpg/05/84/22/77/240_F_584227705_GWhjGNfjkq4tu9ufMNqlt3EPQZNdEUas.jpg" alt="Anthropology Course">
+            <h3>Introduction to Anthropology</h3>
+            <p>Explore human cultures and societies.</p>
+            <div class="category">Anthropology</div>
+            <a href="anthropology.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="economics">
+            <img src="https://media.istockphoto.com/id/814292952/photo/close-up-woman-hand-pressing-calculator-and-doing-finance-at-home-office-with-writing-make.jpg?s=612x612&w=0&k=20&c=2SvPVcL0-uvX82d1ghwANE8zdEqNqgBqrjOHdmO03i8=" alt="Economics Course">
+            <h3>Economics for Beginners</h3>
+            <p>Understand markets, trade, and economic principles.</p>
+            <div class="category">Economics</div>
+            <a href="economics.html">Start Learning</a>
+        </div>
+        <div class="course-card" data-subject="emerging">
+            <img src="https://media.gettyimages.com/id/2140836981/photo/teenage-girls-using-typing-on-laptops.jpg?s=612x612&w=0&k=20&c=j1TBDpNP87aWUim8D-GEuSrEiIE22oimqTP3ErsCoi8=" alt="Emerging Tech Course">
+            <h3>Emerging Technologies</h3>
+            <p>Explore AI, blockchain, and future innovations.</p>
+            <div class="category">Emerging Tech</div>
+            <a href="emerging.html">Start Learning</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <div class="section-container">
+        <h2>What Freshmen Are Saying</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-subject="physics">
+                    <img src="images/nn.png" alt="Sarah K." onerror="this.src='https://via.placeholder.com/100';">
+                    <p>"The Physics course made complex topics so easy to understand!"</p>
+                    <h4>Sarah K., Freshman Student</h4>
+                </div>
+                <div class="testimonial-card" data-subject="english">
+                    <img src="images/james.jpg" alt="James L." onerror="this.src='https://via.placeholder.com/100';">
+                    <p>"English lessons helped me ace my essays. Highly recommend!"</p>
+                    <h4>James L., Freshman Student</h4>
+                </div>
+                <div class="testimonial-card" data-subject="history">
+                    <img src="images/michael.jpg" alt="Michael T." onerror="this.src='https://via.placeholder.com/100';">
+                    <p>"History course brought the past to life in ways I never expected!"</p>
+                    <h4>Michael T., Freshman Student</h4>
+                </div>
+                <div class="testimonial-card" data-subject="anthropology">
+                    <img src="images/priya.jpg" alt="Priya M." onerror="this.src='https://via.placeholder.com/100';">
+                    <p>"Anthropology opened my eyes to diverse cultures and perspectives."</p>
+                    <h4>Priya M., Freshman Student</h4>
+                </div>
+                <div class="testimonial-card" data-subject="logic">
+                    <img src="images/david.jpg" alt="David W." onerror="this.src='https://via.placeholder.com/100';">
+                    <p>"Logic course transformed how I approach problems and arguments."</p>
+                    <h4>David W., Freshman Student</h4>
+                </div>
+                <div class="testimonial-card" data-subject="maths">
+                    <img src="images/olivia.jpg" alt="Olivia S." onerror="this.src='https://via.placeholder.com/100';">
+                    <p>"Foundation Maths gave me the confidence to tackle advanced concepts."</p>
+                    <h4>Olivia S., Freshman Student</h4>
+                </div>
+                <div class="testimonial-card" data-subject="geography">
+                    <img src="images/carlos.jpg" alt="Carlos G." onerror="this.src='https://via.placeholder.com/100';">
+                    <p>"Geography lessons made me see the world in a whole new way!"</p>
+                    <h4>Carlos G., Freshman Student</h4>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button id="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <div class="footer-logo">
+                <a href="/"><img src="https://via.placeholder.com/120x40?text=FreshLearn" alt="FreshLearn Logo"></a>
+            </div>
+            <p>Empowering freshman students with free courses in Maths, English, Physics, Geography, Psychology, and more.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon facebook" data-tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="http://www.youtube.com/@zagweinc" target="_blank" class="social-icon youtube" data-tooltip="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.t.me/sonempireg" target="_blank" class="social-icon telegram" data-tooltip="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Explore More</h3>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="about-us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                    <li><a href="faqs.html"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:support@freshlearn.com">support@freshlearn.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p>Address: 123 Learning Lane, Education City, EC 12345</p>
+        </div>
+        <div class="footer-column">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest course updates and tips.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 FreshLearn. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshLearn - Emerging</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #A435F0;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #A435F0;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1509228622682-30ce16f0325e');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Course Overview Section */
+        .course-overview {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .course-overview h2 {
+            font-size: 2rem;
+            color: #A435F0;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-overview p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .course-objectives {
+            margin-top: 2rem;
+        }
+
+        .course-objectives h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-objectives ul {
+            list-style: disc;
+            padding-left: 2rem;
+        }
+
+        .course-objectives li {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lessons Section */
+        .lessons {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f9f9f9;
+        }
+
+        .lessons h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .lesson-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .lesson-item {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .lesson-item h4 {
+            font-size: 1.2rem;
+            color: #A435F0;
+        }
+
+        .lesson-item p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #2D2F33;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 1rem;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">FreshLearn</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Emerging</h1>
+        <p>Master algebra, geometry, and foundational math skills to excel in your freshman year.</p>
+    </section>
+
+    <!-- Course Overview Section -->
+    <section class="course-overview">
+        <h2>About This Course</h2>
+        <p>This course is designed for freshman students to build a strong foundation in mathematics. Covering key topics like algebra, geometry, and basic calculus, it prepares you for academic success in science, engineering, and beyond.</p>
+        <div class="course-objectives">
+            <h3>What You'll Learn</h3>
+            <ul>
+                <li>Solve linear and quadratic equations with confidence.</li>
+                <li>Understand geometric shapes, theorems, and proofs.</li>
+                <li>Apply basic calculus concepts to real-world problems.</li>
+                <li>Develop problem-solving and critical thinking skills.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section class="lessons">
+        <h2>Course Content</h2>
+        <div class="lesson-list">
+            <div class="lesson-item">
+                <h4>Lesson 1: Introduction to Algebra</h4>
+                <p>Learn the basics of variables, equations, and algebraic expressions.</p>
+            </div>
+            <div class="lesson-item">
+                <h4>Lesson 2: Geometry Fundamentals</h4>
+                <p>Explore shapes, angles, and theorems in geometry.</p>
+            </div>
+            <div class="lesson-item">
+                <h4>Lesson 3: Introduction to Calculus</h4>
+                <p>Understand limits, derivatives, and their applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p>© 2025 FreshLearn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
