@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Maths, English, Physics</title>
+    <link rel="stylesheet" href="gate.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hero" onclick="scrollToSection('hero-section')">Home</a></li>
+            <li><a href="#about" onclick="scrollToSection('about-section')">About</a></li>
+            <li><a href="#instructors" onclick="scrollToSection('instructor-section')">Instructors</a></li>
+            <li><a href="#gate-course" onclick="scrollToSection('group-section')">Gate Course</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-section" id="hero-section">
+        <h1>Welcome to Your Learning Journey</h1>
+        <p>Discover the exciting world of Maths, English, and Physics with our interactive courses designed to spark curiosity and build skills for success.</p>
+    </div>
+
+    <div class="about-section" id="about-section">
+        <h2>About Our Courses</h2>
+        <p>Our project is dedicated to providing high-quality, interactive education in Mathematics, English, and Physics. Designed to foster critical thinking and practical skills, our courses empower learners to excel academically and apply knowledge in real-world scenarios.</p>
+        <div class="about-courses">
+            <div class="about-course-card">
+                <h3>Mathematics</h3>
+                <p>Our Mathematics course equips students with problem-solving tools through algebra, calculus, and geometry. It emphasizes logical reasoning and analytical skills, preparing learners for advanced studies and careers in science, engineering, and technology.</p>
+            </div>
+            <div class="about-course-card">
+                <h3>English</h3>
+                <p>The English course enhances communication and critical thinking through grammar, writing, and literature. Students develop the ability to articulate ideas clearly and analyze texts, fostering skills essential for academic success and professional growth.</p>
+            </div>
+            <div class="about-course-card">
+                <h3>Physics</h3>
+                <p>Physics explores the fundamental laws of the universe, covering mechanics, electromagnetism, and thermodynamics. This course encourages curiosity and innovation, enabling students to understand natural phenomena and apply scientific principles creatively.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="instructor-section" id="instructor-section">
+        <h2>Meet Our Instructors</h2>
+        <div class="instructor-grid">
+            <div class="instructor-card">
+                <img src="https://images.pexels.com/photos/6147157/pexels-photo-6147157.jpeg?auto=compress&cs=tinysrgb&w=100&h=100" alt="Shikur">
+                <h3>Shikur</h3>
+                <p>Instructor for Mathematics</p>
+                <p class="bio">Shikur is a passionate mathematician with over 10 years of teaching experience, specializing in making complex concepts accessible and engaging.</p>
+            </div>
+            <div class="instructor-card">
+                <img src="https://images.pexels.com/photos/7338579/pexels-photo-7338579.jpeg?auto=compress&cs=tinysrgb&w=100&h=100" alt="Abel">
+                <h3>Abel</h3>
+                <p>Instructor for English</p>
+                <p class="bio">Abel is an expert in language and literature, dedicated to helping students excel in communication and critical analysis through interactive methods.</p>
+            </div>
+            <div class="instructor-card">
+                <img src="https://images.pexels.com/photos/3777946/pexels-photo-3777946.jpeg?auto=compress&cs=tinysrgb&w=100&h=100" alt="Fozi">
+                <h3>Makbel</h3>
+                <p>Instructor for Physics</p>
+                <p class="bio">Fozi brings physics to life with hands-on experiments and a knack for explaining the universe's mysteries in an inspiring way.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="group-section" id="group-section">
+        <div class="group-container">
+            <a href="gates.html" class="group-item" id="group1" data-group="Maths, English, Physics" data-tooltip="Explore interactive courses in Mathematics, English, and Physics!">
+                <div class="group-overlay">
+                    <h3>Maths, English, Physics</h3>
+                </div>
+            </a>
+            <div class="group-title">Maths, English, Physics</div>
+            <a href="gates.html" class="start-learning-btn">Start Learning</a>
+        </div>
+    </div>
+
+<script src="gate.js"></script>
+</body>
+</html>

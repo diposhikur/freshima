@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshLearn - FAQs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f7fafc;
+        }
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7c3aed;
+            text-decoration: none;
+        }
+
+        .search-bar input {
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #7c3aed;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #374151;
+        }
+
+        .faqs {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .faqs h1 {
+            font-size: 2.5rem;
+            color: #7c3aed;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #374151;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            color: #7c3aed;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        footer {
+            background: linear-gradient(180deg, #1f2937, #374151);
+            color: #f7fafc;
+            padding: 5rem 2rem 3rem;
+            border-top: 4px solid transparent;
+            border-image: linear-gradient(90deg, #7c3aed, #a78bfa) 1;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.6rem;
+            color: #7c3aed;
+            margin-bottom: 0.8rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+        }
+
+        .footer-column p, .footer-column a {
+            font-size: 0.95rem;
+            color: #d1d5db;
+            line-height: 1.6;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .footer-column a:hover {
+            color: #7c3aed;
+            transform: translateX(5px);
+            text-shadow: 0 2px 4px rgba(124, 58, 237, 0.3);
+        }
+
+        .footer-logo img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            background: #4b5563;
+            color: #f7fafc;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .social-icon:hover {
+            background: #7c3aed;
+            transform: scale(1.2) rotate(360deg);
+            box-shadow: 0 6px 12px rgba(124, 58, 237, 0.4);
+        }
+
+        .social-icon.facebook:hover { background: #3b5998; }
+        .social-icon.youtube:hover { background: #ff0000; }
+        .social-icon.linkedin:hover { background: #0077b5; }
+        .social-icon.telegram:hover { background: #0088cc; }
+
+        .social-icon::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: -40px;
+            background: #7c3aed;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover::after {
+            opacity: 1;
+            top: -50px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            background: #4b5563;
+            color: #f7fafc;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            background: #6b7280;
+            box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+        }
+
+        .newsletter-form button {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #7c3aed, #a78bfa);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .newsletter-form button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(124, 58, 237, 0.4);
+            background: linear-gradient(45deg, #6d28d9, #8b5cf6);
+        }
+
+        .newsletter-form button:active {
+            transform: scale(0.95);
+        }
+
+        .footer-links-container {
+            text-align: left;
+        }
+
+        .footer-links-container h3 {
+            font-size: 1.6rem;
+            color: #7c3aed;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-links li {
+            position: relative;
+        }
+
+        .footer-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            animation: bounce 0.3s ease;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: #7c3aed;
+            transition: width 0.3s ease;
+        }
+
+        .footer-links a:hover::after {
+            width: 80%;
+        }
+
+        .footer-links a:focus {
+            outline: none;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 6px;
+        }
+
+        .footer-links i {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover i {
+            color: #7c3aed;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #6b7280;
+            font-size: 0.9rem;
+            color: #d1d5db;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .search-bar input {
+                width: 100%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .faqs {
+                text-align: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-icons, .footer-links {
+                justify-content: center;
+            }
+
+            .footer-column a:hover, .footer-links a:hover {
+                transform: none;
+                animation: none;
+            }
+
+            .footer-links-container {
+                text-align: center;
+            }
+
+            .footer-links {
+                align-items: center;
+            }
+
+            .footer-logo img {
+                margin: 0 auto;
+            }
+
+            .newsletter-form {
+                align-items: center;
+            }
+
+            .newsletter-form input, .newsletter-form button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/">FreshLearn</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for courses...">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="signin.html">Sign In</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="faqs">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question">What is the cost of FreshLearn courses?<i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">FreshLearn courses are premium offerings with pricing based on course content and duration. Check our pricing page for details.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I enroll in a course?<i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Simply register for an account, browse our courses, and click "Start Learning" to enroll.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I access courses on mobile?<i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes, our platform is fully responsive and accessible on mobile devices, tablets, and desktops.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What types of courses are available?<i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">We offer courses in Maths, English, Physics, Geography, Psychology, and more, tailored for freshman students.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do I get a certificate after completing a course?<i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes, you receive a digital certificate of completion for each course you successfully finish.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How long do I have access to a course?<i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Once enrolled, you have lifetime access to the course materials, including updates.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I get a refund if I’m not satisfied?<i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">We offer a 30-day money-back guarantee if you’re not satisfied with your course purchase.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Is there support available for course content?<i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes, our support team and instructors are available via email and discussion forums to assist you.</div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <a href="/"><img src="https://via.placeholder.com/120x40?text=FreshLearn" alt="FreshLearn Logo"></a>
+                </div>
+                <p>Empowering freshman students with free courses in Maths, English, Physics, Geography, Psychology, and more.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook" data-tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://www.youtube.com/@zagweinc" target="_blank" class="social-icon youtube" data-tooltip="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.t.me/sonempireg" target="_blank" class="social-icon telegram" data-tooltip="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Explore More</h3>
+                <nav>
+                    <ul class="footer-links">
+                        <li><a href="about-us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="faqs.html"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@freshlearn.com">support@freshlearn.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p>Address: 123 Learning Lane, Education City, EC 12345</p>
+            </div>
+            <div class="footer-column">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest course updates and tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 FreshLearn. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // FAQ Accordion Functionality
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('i');
+                answer.classList.toggle('active');
+                icon.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

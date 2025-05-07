@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshLearn - Anthropology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7fafc;
+        }
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .payment-option {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-option:hover {
+            border-color: #9f7aea;
+            background-color: #f5f3ff;
+        }
+
+        .payment-option.selected {
+            border-color: #9f7aea;
+            background-color: #f5f3ff;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #7e22ce, #4f46e5);
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="logo">
+                <a href="index.html" class="text-2xl font-bold text-purple-600">FreshLearn</a>
+            </div>
+            <nav>
+                <ul class="nav-menu flex space-x-6 items-center">
+                    <li><a href="#categories" class="text-gray-700 hover:text-purple-600">Categories</a></li>
+                    <li><a href="signin.html" class="text-gray-700 hover:text-purple-600">Sign In</a></li>
+                    <li><a href="register.html" class="text-gray-700 hover:text-purple-600">Register</a></li>
+                </ul>
+                <div class="hamburger text-gray-700 text-2xl md:hidden">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero text-white text-center py-20">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Anthropology</h1>
+            <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+                Explore human cultures, societies, and evolution to gain a deeper understanding of our world.
+            </p>
+            <a href="#courses" class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">
+                Browse Courses
+            </a>
+        </div>
+    </section>
+
+    <!-- Course Overview Section -->
+    <section class="course-overview py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-purple-600 mb-6">About This Course</h2>
+            <p class="text-gray-600 mb-4">
+                This course is designed for freshmen students to build a strong foundation in anthropology. Covering key topics like cultural anthropology, biological anthropology, and archaeology, it prepares you for academic success in social sciences and beyond.
+            </p>
+            <div class="course-objectives mt-8">
+                <h3 class="text-2xl font-semibold mb-4">What You'll Learn</h3>
+                <ul class="list-disc pl-6 text-gray-600">
+                    <li>Understand the diversity of human cultures and societies.</li>
+                    <li>Explore human evolution and biological adaptations.</li>
+                    <li>Analyze archaeological methods and findings.</li>
+                    <li>Develop critical thinking and cross-cultural analysis skills.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses py-12 px-6 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-purple-600 mb-6">Available Courses</h2>
+            <div class="course-list grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Free Course -->
+                <div class="course-item bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold text-purple-600 mb-2">Introduction to Cultural Anthropology</h4>
+                    <p class="text-gray-600 mb-4">Learn the basics of culture, ethnography, and societal structures.</p>
+                    <p class="text-gray-500 mb-2"><strong>Duration:</strong> 4 weeks</p>
+                    <p class="text-green-600 font-semibold mb-4">Free</p>
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 enroll-btn" data-course="Introduction to Cultural Anthropology">Enroll Now</button>
+                </div>
+                <!-- Paid Course -->
+                <div class="course-item bg-white p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-semibold text-purple-600 mb-2">Advanced Biological Anthropology</h4>
+                    <p class="text-gray-600 mb-4">Dive deep into human evolution, genetics, and primatology.</p>
+                    <p class="text-gray-500 mb-2"><strong>Duration:</strong> 6 weeks</p>
+                    <p class="text-red-600 font-semibold mb-4">100 Birr</p>
+                    <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 purchase-btn" data-course="Advanced Biological Anthropology" data-price="100 Birr">Purchase</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content Preview Section -->
+    <section id="course-content" class="course-content py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 id="course-content-title" class="text-3xl font-bold text-purple-600 mb-6">Course Content</h2>
+            <div id="access-denied" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6">
+                <p>First pay to get the course. Please complete the payment to access the content.</p>
+            </div>
+            <div id="course-material" class="hidden">
+                <p class="text-gray-600 mb-4">You have enrolled in this course! Access the full content by clicking below.</p>
+                <a href="course-content.html" id="course-material-link" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">View Course Content</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="purchase-modal" class="modal">
+        <div class="modal-content">
+            <h3 class="text-2xl font-bold mb-4">Complete Your Purchase</h3>
+            <p id="modal-course-name" class="text-gray-600 mb-2"></p>
+            <p id="modal-course-price" class="text-red-600 font-semibold mb-4"></p>
+            <p class="text-gray-600 mb-4">Please transfer the amount to CBE account number <strong>1000488262048</strong>. After payment, click 'Proceed to Payment' to confirm.</p>
+            
+            <h4 class="text-lg font-semibold mb-3">Select Payment Method:</h4>
+            
+            <div class="payment-option" data-method="telebirr">
+                <div class="flex items-center">
+                    <img src="https://telebirr.com.et/wp-content/uploads/2021/05/telebirr-logo.png" alt="Telebirr" class="h-10 mr-3">
+                    <span class="font-medium">Telebirr</span>
+                </div>
+            </div>
+            
+            <div class="payment-option" data-method="cbe">
+                <div class="flex items-center">
+                    <img src="https://www.combanketh.et/wp-content/uploads/2020/04/cbe-logo.png" alt="CBE" class="h-10 mr-3">
+                    <span class="font-medium">Commercial Bank of Ethiopia (CBE)</span>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <button id="proceed-payment" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 w-full">
+                    Proceed to Payment
+                </button>
+                <button id="close-modal" class="bg-gray-300 text-gray-700 px-6 py-2 rounded hover:bg-gray-400 w-full mt-2">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex justify-center flex-wrap gap-6 mb-6">
+                <a href="#" class="hover:underline">About Us</a>
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+                <a href="#" class="hover:underline">Contact</a>
+            </div>
+            <p class="text-sm">© 2025 FreshLearn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Simple storage for enrolled/purchased courses (simulated)
+        const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
+
+        // Enrollment for Free Courses
+        const enrollButtons = document.querySelectorAll('.enroll-btn');
+        enrollButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const course = button.getAttribute('data-course');
+                if (!enrolledCourses.includes(course)) {
+                    enrolledCourses.push(course);
+                    localStorage.setItem('enrolledCourses', JSON.stringify(enrolledCourses));
+                }
+                alert('You have successfully enrolled in this free course!');
+                showCourseContent(course);
+            });
+        });
+
+        // Payment System
+        const purchaseButtons = document.querySelectorAll('.purchase-btn');
+        const modal = document.getElementById('purchase-modal');
+        const modalCourseName = document.getElementById('modal-course-name');
+        const modalCoursePrice = document.getElementById('modal-course-price');
+        const closeModal = document.getElementById('close-modal');
+        const proceedPayment = document.getElementById('proceed-payment');
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        
+        let selectedPaymentMethod = null;
+        let currentCourse = null;
+
+        purchaseButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const course = button.getAttribute('data-course');
+                const price = button.getAttribute('data-price');
+                modalCourseName.textContent = `Course: ${course}`;
+                modalCoursePrice.textContent = `Price: ${price}`;
+                currentCourse = course;
+                modal.style.display = 'flex';
+                selectedPaymentMethod = null;
+                
+                // Reset selection
+                paymentOptions.forEach(option => {
+                    option.classList.remove('selected');
+                });
+            });
+        });
+
+        // Payment method selection
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                selectedPaymentMethod = option.getAttribute('data-method');
+            });
+        });
+
+        // Proceed to payment
+        proceedPayment.addEventListener('click', () => {
+            if (!selectedPaymentMethod) {
+                alert('Please select a payment method');
+                return;
+            }
+            
+            // Simulate payment processing
+            proceedPayment.disabled = true;
+            proceedPayment.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            
+            setTimeout(() => {
+                // Simulate successful payment
+                if (!enrolledCourses.includes(currentCourse)) {
+                    enrolledCourses.push(currentCourse);
+                    localStorage.setItem('enrolledCourses', JSON.stringify(enrolledCourses));
+                }
+                modal.style.display = 'none';
+                
+                // Redirect to course content page after payment
+                window.location.href = `course-content.html?course=${encodeURIComponent(currentCourse)}`;
+                
+                // Reset button
+                proceedPayment.disabled = false;
+                proceedPayment.textContent = 'Proceed to Payment';
+            }, 2000);
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Function to show course content preview
+        function showCourseContent(course) {
+            const freeCourses = ['Introduction to Cultural Anthropology'];
+            const isFreeCourse = freeCourses.includes(course);
+            const isEnrolled = enrolledCourses.includes(course);
+            const accessDenied = document.getElementById('access-denied');
+            const courseMaterial = document.getElementById('course-material');
+            const courseContentTitle = document.getElementById('course-content-title');
+            const courseMaterialLink = document.getElementById('course-material-link');
+
+            courseContentTitle.textContent = course;
+            accessDenied.classList.add('hidden');
+            courseMaterial.classList.add('hidden');
+
+            if (isFreeCourse || isEnrolled) {
+                courseMaterial.classList.remove('hidden');
+                courseMaterialLink.href = `course-content.html?course=${encodeURIComponent(course)}`;
+            } else {
+                accessDenied.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

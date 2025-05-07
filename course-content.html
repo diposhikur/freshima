@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshLearn - Course Content</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7fafc;
+        }
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .unit-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .unit-item h4 {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .unit-content {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .unit-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="logo">
+                <a href="index.html" class="text-2xl font-bold text-purple-600">FreshLearn</a>
+            </div>
+            <nav>
+                <ul class="nav-menu flex space-x-6 items-center">
+                    <li><a href="index.html#categories" class="text-gray-700 hover:text-purple-600">Categories</a></li>
+                    <li><a href="signin.html" class="text-gray-700 hover:text-purple-600">Sign In</a></li>
+                    <li><a href="register.html" class="text-gray-700 hover:text-purple-600">Register</a></li>
+                </ul>
+                <div class="hamburger text-gray-700 text-2xl md:hidden">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Course Content Section -->
+    <section class="course-content py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 id="course-title" class="text-3xl font-bold text-purple-600 mb-6">Course Content</h2>
+            <div id="access-denied" class="hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6">
+                <p>You have not enrolled in this course. Please enroll or complete the payment to access the content.</p>
+                <a href="index.html#courses" class="text-purple-600 underline">Go to Courses</a>
+            </div>
+            <div id="course-material" class="hidden">
+                <p class="text-gray-600 mb-4">Welcome to your course! Below are the 10 units for your enrolled course.</p>
+                <div class="unit-list">
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 1: Introduction to Anthropology <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Overview of Anthropology</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit1.pdf" class="text-purple-600 underline" target="_blank">Download Unit 1 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 2: Cultural Diversity <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Understanding Cultural Diversity</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit2.pdf" class="text-purple-600 underline" target="_blank">Download Unit 2 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 3: Human Evolution <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Basics of Human Evolution</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit3.pdf" class="text-purple-600 underline" target="_blank">Download Unit 3 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 4: Archaeological Methods <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Introduction to Archaeology</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit4.pdf" class="text-purple-600 underline" target="_blank">Download Unit 4 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 5: Social Structures <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Exploring Social Structures</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit5.pdf" class="text-purple-600 underline" target="_blank">Download Unit 5 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 6: Language and Culture <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Language in Anthropology</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit6.pdf" class="text-purple-600 underline" target="_blank">Download Unit 6 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 7: Kinship and Family <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Kinship Systems</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit7.pdf" class="text-purple-600 underline" target="_blank">Download Unit 7 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 8: Economic Systems <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Anthropology of Economics</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit8.pdf" class="text-purple-600 underline" target="_blank">Download Unit 8 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 9: Religion and Belief Systems <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Anthropology of Religion</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit9.pdf" class="text-purple-600 underline" target="_blank">Download Unit 9 PDF</a></p>
+                        </div>
+                    </div>
+                    <div class="unit-item">
+                        <h4 class="text-lg font-semibold text-purple-600">Unit 10: Globalization and Anthropology <i class="fas fa-chevron-down"></i></h4>
+                        <div class="unit-content">
+                            <p class="text-gray-600 mb-2">Video: Anthropology in a Global World</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-gray-600 mt-2"><a href="unit10.pdf" class="text-purple-600 underline" target="_blank">Download Unit 10 PDF</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex justify-center flex-wrap gap-6 mb-6">
+                <a href="#" class="hover:underline">About Us</a>
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+                <a href="#" class="hover:underline">Contact</a>
+            </div>
+            <p class="text-sm">© 2025 FreshLearn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Check course access
+        const urlParams = new URLSearchParams(window.location.search);
+        const course = urlParams.get('course');
+        const courseTitle = document.getElementById('course-title');
+        const accessDenied = document.getElementById('access-denied');
+        const courseMaterial = document.getElementById('course-material');
+
+        const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
+        const freeCourses = ['Introduction to Cultural Anthropology'];
+        const isFreeCourse = freeCourses.includes(course);
+        const isEnrolled = enrolledCourses.includes(course);
+
+        courseTitle.textContent = course ? `${course}` : 'Course Content';
+
+        if (isFreeCourse || isEnrolled) {
+            courseMaterial.classList.remove('hidden');
+        } else {
+            accessDenied.classList.remove('hidden');
+        }
+
+        // Toggle unit content visibility
+        const unitHeaders = document.querySelectorAll('.unit-item h4');
+        unitHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+                const icon = header.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+    </script>
+</body>
+</html>
